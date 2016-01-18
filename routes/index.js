@@ -8,7 +8,15 @@ module.exports = function(io){
     io.sockets.emit('socket1', {status:"ok"});
   });
 
-  router.post('/', function(req, res){
+  router.post('/status', function(req, res){
+    io.sockets.emit('socket1', req.body);
+    res.json({
+      status:"OK"
+    });
+  });
+
+  router.post('/status/init', function(req, res){
+    console.log(req.body);
     io.sockets.emit('socket1', req.body);
     res.json({
       status:"OK"
