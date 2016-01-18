@@ -14,7 +14,7 @@ module.exports = function(io){
   router.post('/status/init', function(req, res){
     fs.writeFile('DataCache/temp.json', JSON.stringify(req.body),function(err){
       if(!err){
-        io.sockets.emit('socket1', req.body);
+        io.sockets.emit('newTask', req.body);
         res.json({
           status:"OK"
         });

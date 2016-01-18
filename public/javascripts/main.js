@@ -24,6 +24,10 @@ function init() {
   socket.on("socket1", function(msg){
     console.log(msg);
   });
+
+  socket.on("newTask", function(){
+    window.location.reload();
+  });
 }
 
 $(document).on('ready', init);
