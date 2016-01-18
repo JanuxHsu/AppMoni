@@ -21,8 +21,9 @@ function init() {
     console.log('Connected ' + sessionId);
   });
 
-  socket.on("socket1", function(msg){
-    console.log(msg);
+  socket.on("update", function(data){
+    console.log(data);
+    $("b").find(data.progress).text('Status: '+data.status);
   });
 
   socket.on("newTask", function(){

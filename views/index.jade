@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 This is H1
+  h1 Current processing: + cache.appId
   #mainPanel
     .subPanel 
       .taskTitle Progress
@@ -10,7 +10,7 @@ block content
           li
             span.task_text= index+1+".  "+val
             span.status Status: 
-              b pending
+              b(target= val) pending
     if cache.LDA.execute    
       .subPanel
         .taskTitle LDA
@@ -19,4 +19,4 @@ block content
             li
               span.task_text= index+1+".  "+val
               span.status Status: 
-                b pending
+                b(target= val) pending

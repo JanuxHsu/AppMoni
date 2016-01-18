@@ -24,7 +24,7 @@ module.exports = function(io){
 
   router.post('/status', function(req, res){
     console.log(req.body);
-    io.sockets.emit('socket1', req.body);
+    io.sockets.emit('update', req.body);
     res.json({
       status:"OK"
     });
