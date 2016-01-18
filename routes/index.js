@@ -24,6 +24,12 @@ module.exports = function(io){
 
   router.post('/status', function(req, res){
     console.log(req.body);
+    fs.readFile('DataCache/temp.json', 'utf8', function (err, data) {
+      if (err) throw err;
+      var obj = JSON.parse(data);
+      console.log(req.body);
+      console.log(obj);
+    });
     io.sockets.emit('update', req.body);
     res.json({
       status:"OK"
