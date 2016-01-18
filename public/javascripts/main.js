@@ -39,6 +39,29 @@ function init() {
   socket.on("newTask", function(){
     window.location.reload();
   });
+
+
 }
 
-$(document).on('ready', init);
+$(document).on('ready', function(){
+  init();
+
+  $('#btn').click(function(){
+    console.log("OK");
+    $.ajax({
+      url: '140.119.19.19:6892',
+      data: {
+        appId : $('#data').val()
+      },
+      type:"POST",
+      dataType:'jsonp',
+      success: function(msg){
+          console.log("OK");
+      },
+       error:function(xhr, ajaxOptions, thrownError){
+          alert(xhr.status);
+          alert(thrownError);
+       }
+    });
+  });
+});
