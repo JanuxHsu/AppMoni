@@ -26,6 +26,11 @@ function init() {
     if(data.status == "execute"){
       $("b[target="+data.progress+"]").css("background-color",'green').text("Processing");
     }
+
+    if(data.status == "executing"){
+      $("b[target="+data.progress+"]").css("background-color",'#ff9900').text(parseInt(data.percentage)*100+"%");
+    }
+
     if(data.status == "executed"){
       $("b[target="+data.progress+"]").css("background-color",'blue').text("Done");
     }

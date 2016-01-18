@@ -35,9 +35,11 @@ li {
 }
 .status{
   flex:4;
+  text-align: right;
 }
 
 .status > b {
+  min-width: 67px;
   background-color: red;
   color: #FFF;
   padding: 1px 4px 2px 4px;
