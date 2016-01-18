@@ -6,3 +6,46 @@ body {
 a {
   color: #00B7FF;
 }
+
+#mainPanel {
+  display: flex;
+  padding: 5px;
+}
+
+.subPanel {
+  margin-right: 10px;
+}
+
+ul{
+  width: 400px;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.task_text{
+  flex:7;
+}
+.status{
+  flex:3;
+}
+
+.status > b {
+  background-color: red;
+  color: #FFF;
+  padding: 1px 4px 2px 4px;
+  border-radius: 5px;
+}
+
+.taskTitle {
+  padding: 15px;
+  width: 400px;
+  border: 1px solid black;
+}

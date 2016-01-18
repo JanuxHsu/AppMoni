@@ -1,6 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  button#test Click
+  h1 This is H1
+  #mainPanel
+    .subPanel 
+      .taskTitle Progress
+      ul
+        each val, index in cache.progress
+          li
+            span.task_text= index+1+".  "+val
+            span.status Status: 
+              b pending
+    if cache.LDA.execute    
+      .subPanel
+        .taskTitle LDA
+        ul
+          each val, index in cache.LDA.func_list
+            li
+              span.task_text= index+1+".  "+val
+              span.status Status: 
+                b pending
