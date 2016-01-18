@@ -23,7 +23,12 @@ function init() {
 
   socket.on("update", function(data){
     console.log(data);
-    $("b").find(data.progress).text('Status: '+data.status);
+    if(data.status == "execute"){
+      $("b[target="+data.progress+"]").css("background-color",'green').text("Processing");
+    }
+    if(data.status == "executed"){
+      $("b[target="+data.progress+"]").css("background-color",'blue').text("Done");
+    }
   });
 
   socket.on("newTask", function(){

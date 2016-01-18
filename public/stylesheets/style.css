@@ -17,7 +17,7 @@ a {
 }
 
 ul{
-  width: 400px;
+  width: 450px;
   padding: 15px;
   border: 1px solid black;
 }
@@ -34,7 +34,7 @@ li {
   flex:7;
 }
 .status{
-  flex:3;
+  flex:4;
 }
 
 .status > b {
@@ -44,8 +44,9 @@ li {
   border-radius: 5px;
 }
 
+
 .taskTitle {
   padding: 15px;
-  width: 400px;
+  width: 450px;
   border: 1px solid black;
 }
