@@ -14,7 +14,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3310');
 app.set('port', port);
 
 /**
@@ -26,7 +26,7 @@ var server = http.createServer(app);
 /**
  * Socket.io
  */
-io.attach(server); 
+io.attach(server);
 
 /**
  * Listen on provided port, on all network interfaces.
