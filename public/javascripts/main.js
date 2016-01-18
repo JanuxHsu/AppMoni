@@ -28,7 +28,7 @@ function init() {
     }
 
     if(data.status == "executing"){
-      $("b[target="+data.progress+"]").css("background-color",'#ff9900').text(Math.round(data.percentage * 100) / 100+"%");
+      $("b[target="+data.progress+"]").css("background-color",'#ff9900').text(Math.round(data.percentage * 10000) / 100+"%");
     }
 
     if(data.status == "executed"){
